@@ -1,0 +1,566 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #513c27;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.85rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/pexels-jonathanborba-3082790.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content: flex-start;
+  padding: 0 5%;
+  background-attachment: scroll; /* Menghilangkan efek parallax tetap */
+  background-position: center center; /* Memastikan gambar selalu berada di tengah */
+}
+
+.hero-text {
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+  width: 40%;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .cta {
+  background-color: var(--primary);
+  padding: 0.8rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .cta:hover {
+  background-color: #9e7b45;
+}
+
+/* About Section */
+
+.about,
+.menu,
+.contact {
+  padding: 7rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.contact {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 24px; /* Ukuran font untuk judul */
+  font-weight: bold;
+  margin-bottom: 10px; /* Memberikan jarak bawah antara judul dan paragraf */
+}
+
+.description {
+  font-size: 12.5px; /* Ukuran font untuk paragraf */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.primary-color {
+  color: var(
+    --primary
+  ); /* Menggunakan variabel warna primary yang sudah didefinisikan */
+}
+
+.white-color {
+  color: white; /* Menetapkan warna putih untuk bagian "Kami" */
+}
+
+.about h2 span,
+.menu h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+/* Gambar pada About Section */
+.about-img img {
+  width: 90%; /* Mengubah lebar gambar menjadi 80% dari lebar kontainer */
+  max-width: 600px; /* Menetapkan lebar maksimum gambar */
+  height: auto; /* Menjaga proporsi gambar */
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+/* Layout untuk bagian About */
+.about .row {
+  display: flex;
+}
+
+/* Gambar di sebelah kiri */
+.about .row .about-img {
+  flex: 1; /* Gambar mengambil sebagian ruang */
+}
+
+.about .row .about-img img {
+  width: 100%; /* Memastikan gambar mengisi kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+  object-fit: cover; /* Menyesuaikan gambar agar tidak terdistorsi */
+}
+
+/* Konten di sebelah kanan */
+.about .row .content {
+  flex: 1; /* Konten mengambil sebagian ruang yang tersisa */
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.6rem;
+}
+
+/* Menu Section */
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  text-align: center;
+  max-width: 20rem;
+  margin: auto;
+  font-weight: 50%;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.row {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: center; /* Membuat elemen di dalamnya rata tengah secara horizontal */
+}
+
+.menu-card {
+  text-align: center; /* Teks di dalam menu-card berada di tengah */
+  padding-bottom: 2rem;
+}
+
+.menu-card img {
+  display: block; /* Memastikan gambar tidak ada space di bawahnya */
+  margin: 0 auto; /* Gambar akan berada di tengah secara horizontal */
+}
+
+.menu .row .menu-card img {
+  border-radius: 60%;
+  width: 90%;
+}
+
+.menu .row .menu.card .menu-card-tittle {
+  margin-top: 2rem auto 1rem;
+}
+
+.row {
+  display: flex; /* Menggunakan flexbox untuk membuat elemen berada dalam satu baris */
+  justify-content: space-around; /* Memberi jarak yang sama antar elemen */
+}
+
+.menu-card {
+  text-align: center;
+  margin: 0 15px; /* Menambahkan jarak kiri dan kanan antar elemen menu-card */
+}
+
+.menu-card img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px; /* Menambahkan jarak bawah antara gambar dan teks Espresso */
+}
+
+.menu-card-img {
+  margin-bottom: 10px; /* Menambahkan jarak bawah antara teks Espresso dan IDR 15K */
+}
+
+.menu-card-price {
+  margin-top: 10px; /* Menambahkan jarak atas antara IDR 15K dan elemen lainnya */
+}
+
+/* Menyesuaikan ukuran font dan layout di perangkat desktop */
+@media (min-width: 1024px) {
+  .about .row .content p {
+    font-size: 1.4rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Contact section */
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+}
+
+/* Warna latar belakang input menjadi hitam */
+input {
+  background-color: #010101; /* Warna latar belakang kotak menjadi hitam */
+  color: white; /* Warna teks yang dimasukkan menjadi putih */
+  padding: 1rem; /* Menambahkan jarak dalam kotak input */
+  margin: 0.8rem 0; /* Menambahkan jarak antar input */
+  border-radius: 5px; /* Memberikan sudut melengkung pada kotak input */
+  border: 1px solid #eee; /* Memberikan border yang terang */
+}
+
+/* Warna placeholder tetap putih */
+input::placeholder {
+  color: white;
+  opacity: 0.7; /* Opacity sedikit lebih rendah untuk placeholder */
+}
+
+/* Memberikan sedikit jarak antara teks dan tepi kotak input */
+input[type="text"] {
+  padding-left: 1.5rem; /* Memberikan jarak kiri antara teks dan tepi kotak */
+}
+
+input {
+  background-color: #010101;
+  color: white;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  width: 80%; /* Lebar 80% dari kontainer */
+  box-sizing: border-box;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* footer */
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 1rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+@media (max-width: 758px) {
+  .contact .row {
+    display: flex; /* Menggunakan flexbox untuk tata letak berdampingan */
+    flex-direction: column; /* Menyusun elemen secara vertikal jika perlu */
+    gap: 2rem; /* Menambahkan jarak antar elemen, sesuaikan dengan kebutuhan */
+  }
+
+  /* Gambar peta */
+  .contact .row .map {
+    width: 100%; /* Membuat peta mengisi lebar penuh pada tablet */
+    height: 300px; /* Menyesuaikan tinggi peta agar tidak terlalu besar */
+    margin-bottom: 0 rem; /* Memberikan sedikit jarak bawah pada peta */
+  }
+
+  /* Form */
+  .contact .row form {
+    width: 100%; /* Membuat form mengisi lebar penuh */
+    padding: 2rem; /* Memberikan padding dalam form */
+    margin-top: 0; /* Mengatur margin agar lebih rapat */
+  }
+
+  /* Input fields (untuk menjaga jarak antar elemen input) */
+  .contact .row form .input-group {
+    margin-top: 1rem; /* Memberikan jarak antar elemen input */
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Media Query untuk perangkat dengan layar lebih kecil (seperti HP) */
+@media (max-width: 758px) {
+  .about .row {
+    flex-direction: column; /* Menyusun gambar dan teks secara vertikal */
+    align-items: flex-start; /* Mengatur agar konten di kiri */
+  }
+
+  .about .row .about-img {
+    width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+    margin-bottom: 1.5rem; /* Memberikan jarak antara gambar dan teks */
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .contant h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .contant p {
+    font-size: 1.6rem;
+  }
+
+  .about .row .content {
+    width: 100%; /* Membuat konten mengambil lebar penuh */
+  }
+
+  .about .row .content h3 {
+    font-size: 1.5rem; /* Menyesuaikan ukuran font judul di ponsel */
+  }
+
+  .about .row .content p {
+    font-size: 1rem; /* Menyesuaikan ukuran font paragraf di ponsel */
+  }
+}
